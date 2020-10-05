@@ -95,4 +95,16 @@ img {
   height: 100px;
   margin-bottom: 15px;
 }
+
+@media (max-width: 640px) {
+  .modal .modal-inner {
+    width: 60%;
+  }
+  .modal .modal-inner img {
+    height: 50px;
+  }
+  .modal .modal-inner h2, .modal .modal-inner div {
+    font-size: 8px;
+  }
+}
 /*# sourceMappingURL=style.css.map */
