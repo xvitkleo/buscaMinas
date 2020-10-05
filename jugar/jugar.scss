@@ -146,4 +146,13 @@ body {
             }
         }
     }
+
+    .modal {
+        .modal-inner {
+            width: 70%;
+            h2, div {
+                font-size: 8px;
+            }
+        }
+    }
 }

@@ -190,5 +190,11 @@ body {
   body .menu .arrows i {
     font-size: 25px;
   }
+  .modal .modal-inner {
+    width: 70%;
+  }
+  .modal .modal-inner h2, .modal .modal-inner div {
+    font-size: 8px;
+  }
 }
 /*# sourceMappingURL=jugar.css.map */
