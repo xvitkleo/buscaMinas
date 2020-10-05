@@ -21,7 +21,7 @@ body {
   margin: 20px auto;
   display: -ms-grid;
   display: grid;
-  width: 800px;
+  width: 1000px;
   padding: 10px;
   -ms-grid-columns: (20%)[5];
       grid-template-columns: repeat(5, 20%);

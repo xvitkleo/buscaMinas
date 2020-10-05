@@ -194,8 +194,14 @@ document.querySelectorAll(".arrow").forEach(arrow => {
             else if(clase.includes("left")) mapaActual = mover("left", mapaActual, mapaMinas);
             actualizarMatriz(obtenerMatrixDeMapa(mapaActual));        
             var resultado = obtenerResultado(mapaActual, mapaPrevio);
-            if(resultado == "fin") mostrarPerder();
-            else if(resultado == "mina") actualizarVida();  
+            if(resultado == "fin") {
+                document.querySelector(".ganar").style.display = "grid";    
+                life=0;        
+            }
+            else if(resultado == "mina") {
+                actualizarVida();   
+                verificarEstado(); 
+            }    
             mapaPrevio = mapaActual;  
         }              
     })
@@ -222,11 +228,13 @@ document.addEventListener("keydown", function(e) {
         actualizarMatriz(obtenerMatrixDeMapa(mapaActual));
         var resultado = obtenerResultado(mapaActual, mapaPrevio);
         if(resultado == "fin") {
-            document.querySelector(".ganar").style.display = "grid";
-            life = 0;
+            document.querySelector(".ganar").style.display = "grid";    
+            life=0;        
         }
-        else if(resultado == "mina") actualizarVida();    
-        verificarEstado();
+        else if(resultado == "mina") {
+            actualizarVida();   
+            verificarEstado(); 
+        }        
         mapaPrevio = mapaActual;   
     }
      
