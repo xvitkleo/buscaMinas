@@ -17,7 +17,7 @@ body {
 .container {
     margin: 20px auto;
     display: grid;
-    width: 1000px;
+    width: 900px;
     padding: 10px;
     grid-template-columns: repeat(5, 20%);
     grid-template-rows: repeat(5, 20%);
@@ -46,6 +46,8 @@ body {
     width: 250px;
     padding: 10px;
     display: grid;
+    margin-right: auto;
+    margin-left: auto;
     grid-template-columns: repeat(3, 50px);
     align-content: center;
     justify-content: center;
@@ -77,6 +79,19 @@ body {
         }
     }
     .options {
+        div {
+            p {
+                color: gray;
+                &:hover {
+                    color: gray;
+                }
+            }
+            .resultado {
+                font-size: 14px;
+                font-weight: bolder;                
+            }            
+        }
+        
         p {
             margin: 20px;
             cursor: pointer;

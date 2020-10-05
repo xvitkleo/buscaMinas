@@ -194,8 +194,10 @@ document.querySelectorAll(".arrow").forEach(arrow => {
             else if(clase.includes("left")) mapaActual = mover("left", mapaActual, mapaMinas);
             actualizarMatriz(obtenerMatrixDeMapa(mapaActual));        
             var resultado = obtenerResultado(mapaActual, mapaPrevio);
+            document.querySelector('.resultado').textContent = resultado.toUpperCase();
             if(resultado == "fin") {
-                document.querySelector(".ganar").style.display = "grid";    
+                document.querySelector(".ganar").style.display = "grid";   
+                document.querySelector('.resultado').textContent = "FELICIDADES"; 
                 life=0;        
             }
             else if(resultado == "mina") {
@@ -227,8 +229,10 @@ document.addEventListener("keydown", function(e) {
         } 
         actualizarMatriz(obtenerMatrixDeMapa(mapaActual));
         var resultado = obtenerResultado(mapaActual, mapaPrevio);
+        document.querySelector('.resultado').textContent = resultado.toUpperCase();
         if(resultado == "fin") {
             document.querySelector(".ganar").style.display = "grid";    
+            document.querySelector('.resultado').textContent = "FELICIDADES";
             life=0;        
         }
         else if(resultado == "mina") {
@@ -253,6 +257,7 @@ document.querySelectorAll(".boton_aceptar").forEach(boton => {
 function verificarEstado() {
     if(life<0) life=0;
     if(life==0) {    
+        document.querySelector('.resultado').textContent = "ROBOT DESTRUIDO";
         document.querySelector(".perder").style.display = "grid";
     }
 }
