@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    font-family: 'Press Start 2P', cursive;
+    box-sizing: border-box;    
+    color: #a09b98;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    background-color: #D0E3F8;
+}
+
+.container {
+    margin: 20px auto;
+    display: grid;
+    width: 800px;
+    padding: 10px;
+    grid-template-columns: repeat(5, 20%);
+    grid-template-rows: repeat(5, 20%);
+
+    div:not(.car) {
+        border: solid 3px white;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .car {
+        color: white;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+            width: 60%;
+            height: 70%;
+        }
+    }    
+}
+.arrows {
+    height: 250px;
+    width: 250px;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(3, 50px);
+    align-content: center;
+    justify-content: center;
+    div {
+        i {
+            cursor: pointer;
+            font-size: 50px;
+            &:hover {
+                color: orange;
+            }
+        }
+    }
+    
+}
+
+.menu {
+    margin: 20px auto;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    text-align: center;
+    justify-content: space-between;
+    .hud {
+        margin: 50px;
+        font-size: 22px;
+        i {
+            color: rgb(112, 183, 224);
+            transition: 1s color;
+        }
+    }
+    .options {
+        p {
+            margin: 20px;
+            cursor: pointer;
+            &:hover {
+                color: orange;                
+            }
+        }
+    }
+}
+
+.modal {
+    position: absolute;
+    height: 100%;
+    width: 100%;   
+    align-content: center;
+    display: none;
+}
+
+.modal-inner {
+    display: flex;
+    flex-flow: column;
+    background-color: white; 
+    align-items: center;
+    text-align: center;
+    width: 30%;
+    margin: auto;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.modal-inner h2, .modal-inner div {
+    color: black;
+    font-size: 12px;
+    font-weight: 900;
+    line-height : 25px;
+    margin: 10px;
+}
+
+.modal-inner div:last-child{ 
+    cursor: pointer;
+    color: black;
+    font-weight: bold;
+    background-color: #70B7E0;
+    border-radius: 5px;
+    padding: 7px;
+}
+
+@media (max-width: 640px) {
+    body {
+        flex-flow: column;
+
+        .container {
+            height: 100%;
+            width: 100%;
+        }
+
+        .menu {
+            .hud, .options, .arrows {
+                margin: 5px;
+                font-size: 15px;
+            }
+            .arrows {
+                height: 75px;
+                i {
+                    font-size: 25px;
+                }
+            }
+        }
+    }
+}

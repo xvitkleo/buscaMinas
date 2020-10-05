@@ -1,0 +1,30 @@
+html {
+  height: 100%;
+  font-family: 'Press Start 2P', cursive;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  display: -ms-grid;
+  display: grid;
+  background-color: black;
+}
+
+.container {
+  -ms-flex-item-align: center;
+      align-self: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+/*# sourceMappingURL=style.css.map */

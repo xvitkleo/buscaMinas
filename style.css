@@ -1,0 +1,98 @@
+html {
+  height: 100%;
+  font-family: 'Press Start 2P', cursive;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  display: -ms-grid;
+  display: grid;
+  background-color: #D0E3F8;
+  position: relative;
+}
+
+.container {
+  -ms-flex-item-align: center;
+      align-self: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+a {
+  margin: 8px;
+  color: gray;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+a:hover {
+  color: orange;
+}
+
+h1, h2 {
+  color: gray;
+  text-align: center;
+}
+
+.modal {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  display: none;
+}
+
+.modal-inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  background-color: white;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  width: 30%;
+  margin: auto;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.modal-inner h2, .modal-inner div {
+  color: black;
+  font-size: 12px;
+  font-weight: 900;
+  line-height: 25px;
+}
+
+.modal-inner div:last-child {
+  cursor: pointer;
+  color: black;
+  font-weight: bold;
+  background-color: #70B7E0;
+  border-radius: 5px;
+  padding: 7px;
+}
+
+img {
+  height: 100px;
+  margin-bottom: 15px;
+}
+/*# sourceMappingURL=style.css.map */
