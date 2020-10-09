@@ -36,7 +36,7 @@ h1, h2 {
     text-align: center;
 }
 
-.modal {
+.modal, .modal_instrucciones {
     position: absolute;
     height: 100%;
     width: 100%;   
@@ -44,7 +44,7 @@ h1, h2 {
     display: none;
 }
 
-.modal-inner {
+.modal-inner, .modal_instrucciones-inner {
     display: flex;
     flex-flow: column;
     background-color: white; 
@@ -54,24 +54,28 @@ h1, h2 {
     margin: auto;
     padding: 15px;
     border-radius: 5px;
-}
 
-.modal-inner h2, .modal-inner div {
-    color: black;
-    font-size: 12px;
-    font-weight: 900;
-    line-height : 25px;
-}
+    p {
+        font-size: 10px;
+        text-align: left;
+        font-weight: lighter;
+    }
 
-.modal-inner div:last-child{ 
-    cursor: pointer;
-    color: black;
-    font-weight: bold;
-    background-color: #70B7E0;
-    border-radius: 5px;
-    padding: 7px;
+    h2, div {
+        color: black;
+        font-size: 12px;
+        font-weight: 900;
+        line-height : 25px;
+    } 
+    div:last-child{ 
+        cursor: pointer;
+        color: black;
+        font-weight: bold;
+        background-color: #70B7E0;
+        border-radius: 5px;
+        padding: 7px;
+    }
 }
-
 img {
     height: 100px;
     margin-bottom: 15px;
@@ -88,6 +92,18 @@ img {
                 font-size: 8px;
             }
         }
+    }
+    
+    .modal_instrucciones {
+        .modal_instrucciones-inner {
+            width: 70%;
+            img {
+                height: 50px;
+            }
+            div {
+                font-size: 8px;
+            }
+        }        
     }
 }
 

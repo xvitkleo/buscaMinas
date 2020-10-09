@@ -63,6 +63,7 @@ body {
 }
 
 .arrows {
+  visibility: visible;
   height: 250px;
   width: 250px;
   padding: 10px;
@@ -182,6 +183,18 @@ body {
   background-color: #70B7E0;
   border-radius: 5px;
   padding: 7px;
+}
+
+.options .container_nivel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.options .container_nivel p {
+  margin: 5px;
 }
 
 @media (max-width: 640px) {

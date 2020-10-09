@@ -1,6 +1,7 @@
 html {
   height: 100%;
   font-family: 'Press Start 2P', cursive;
+  color: #a09b98;
 }
 
 body {
@@ -10,7 +11,7 @@ body {
   border: 0;
   display: -ms-grid;
   display: grid;
-  background-color: black;
+  background-color: #D0E3F8;
 }
 
 .container {
@@ -26,5 +27,42 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.container .datos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+}
+
+.container .datos img {
+  height: 250px;
+  margin: 20px;
+}
+
+.container .regresar {
+  cursor: pointer;
+  text-decoration: none;
+  color: #a09b98;
+}
+
+.container .regresar:hover {
+  color: orange;
+}
+
+@media (max-width: 640px) {
+  h2 {
+    font-size: 20px;
+  }
+  .container .datos {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+  }
+  .container .datos img {
+    height: 100px;
+  }
 }
 /*# sourceMappingURL=style.css.map */

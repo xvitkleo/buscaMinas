@@ -1,6 +1,7 @@
 html {
     height: 100%;
     font-family: 'Press Start 2P', cursive;
+    color: #a09b98;
 }
 body {
     height: 100%;
@@ -8,7 +9,7 @@ body {
     padding: 0;
     border: 0;
     display: grid;
-    background-color: black;
+    background-color: #D0E3F8;
 }
 
 .container {
@@ -17,4 +18,34 @@ body {
     display: flex;
     flex-flow: column;
     align-items: center;
+
+    .datos {
+        display: flex;
+        text-align: center;
+        img {
+            height: 250px;
+            margin: 20px;
+        }
+    }
+
+    .regresar {
+        cursor: pointer;
+        text-decoration: none;
+        color: #a09b98;
+        &:hover {
+                color: orange;
+        }
+    }
+}
+
+@media (max-width: 640px) {
+    h2 {
+        font-size: 20px;
+    }
+    .container .datos {
+        flex-flow: column;
+        img {
+        height: 100px;
+        }
+    }
 }

@@ -47,7 +47,7 @@ h1, h2 {
   text-align: center;
 }
 
-.modal {
+.modal, .modal_instrucciones {
   position: absolute;
   height: 100%;
   width: 100%;
@@ -56,7 +56,7 @@ h1, h2 {
   display: none;
 }
 
-.modal-inner {
+.modal-inner, .modal_instrucciones-inner {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -75,14 +75,20 @@ h1, h2 {
   border-radius: 5px;
 }
 
-.modal-inner h2, .modal-inner div {
+.modal-inner p, .modal_instrucciones-inner p {
+  font-size: 10px;
+  text-align: left;
+  font-weight: lighter;
+}
+
+.modal-inner h2, .modal-inner div, .modal_instrucciones-inner h2, .modal_instrucciones-inner div {
   color: black;
   font-size: 12px;
   font-weight: 900;
   line-height: 25px;
 }
 
-.modal-inner div:last-child {
+.modal-inner div:last-child, .modal_instrucciones-inner div:last-child {
   cursor: pointer;
   color: black;
   font-weight: bold;
@@ -104,6 +110,15 @@ img {
     height: 50px;
   }
   .modal .modal-inner h2, .modal .modal-inner div {
+    font-size: 8px;
+  }
+  .modal_instrucciones .modal_instrucciones-inner {
+    width: 70%;
+  }
+  .modal_instrucciones .modal_instrucciones-inner img {
+    height: 50px;
+  }
+  .modal_instrucciones .modal_instrucciones-inner div {
     font-size: 8px;
   }
 }
