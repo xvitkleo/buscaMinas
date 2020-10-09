@@ -187,6 +187,7 @@ console.log(mapaActual);
 document.querySelectorAll(".arrow").forEach(arrow => {
     arrow.firstChild.addEventListener("click", function() {
         if(lifes>0) {
+            console.log(mapaActual);
             document.querySelector(".arrows").style.visibility = 'hidden';
             var timer = setInterval(function(){
                 document.querySelector(".resultado").textContent = timeToMove;
@@ -217,10 +218,11 @@ document.querySelectorAll(".arrow").forEach(arrow => {
                         timeToMove = 4;
                         clearInterval(timer); 
                         document.querySelector(".arrows").style.visibility = 'visible';
+                        if(lifes<=0) document.querySelector(".arrows").style.visibility = "hidden"; 
                     }    
                 } 
                 timeToMove -= 1;
-            }, 1000);
+            }, 0);
         }    
                       
     })
@@ -312,7 +314,7 @@ function generarMapa() {
     mapaB[20] = '+';
     mapaB[4] = '#';
     cont = 0;
-	for(var i=0; i<6; i++) {
+	for(var i=0; i<5; i++) {
     	rand = Math.floor(Math.random()*25);
   		while(posMinas.includes(rand) || rand == 20 || rand == 4) rand = Math.floor(Math.random()*(25-1))+1;
     	posMinas[cont++] = rand;
@@ -325,7 +327,6 @@ function generarMapa() {
     }
     return mapa;
 }
-
 
 document.querySelector(".reiniciar").addEventListener("click", function() {
     window.location.href = './Jugar.html';

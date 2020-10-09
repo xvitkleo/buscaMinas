@@ -15,9 +15,9 @@ document.querySelector(".boton_instrucciones_aceptar").addEventListener("click",
 })
 
 document.querySelector(".jugar").addEventListener('mouseover', function(e) {
-    e.target.textContent = "Nuevo juego";
+    e.target.textContent = "NUEVO JUEGO";
 })
 
 document.querySelector(".jugar").addEventListener('mouseout', function(e) {
-    e.target.textContent = "Jugar";
+    e.target.textContent = "JUGAR";
 })
